@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('http-requests').innerText = result.httpRequests;
         document.getElementById('page-size').innerText = result.pageSize + ' KB';
         document.getElementById('num-scripts').innerText = result.numScripts;
+        document.getElementById('mobile-preview').innerText = result.mobilePreview;
+        document.getElementById('mobile-load-time').innerText = result.mobileLoadTime + ' ms';
+        document.getElementById('open-graph').innerText = result.openGraph;
+        document.getElementById('twitter-card').innerText = result.twitterCard;
+
+        document.getElementById('generate-pdf').addEventListener('click', () => generatePDF(result));
+        document.getElementById('export-csv').addEventListener('click', () => exportCSV(result));
       }
     );
   });
@@ -80,6 +87,12 @@ function analyzeSEO() {
     .reduce((total, entry) => total + (entry.transferSize || 0), 0) / 1024);
   const numScripts = document.querySelectorAll('script').length;
 
+  const mobilePreview = 'Mobile preview not implemented'; // Placeholder for mobile preview
+  const mobileLoadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart; // Placeholder for mobile load time
+
+  const openGraph = document.querySelectorAll('meta[property^="og:"]').length ? 'Open Graph tags found' : 'No Open Graph tags';
+  const twitterCard = document.querySelectorAll('meta[name^="twitter:"]').length ? 'Twitter Card tags found' : 'No Twitter Card tags';
+
   return {
     title,
     metaDescription,
@@ -97,6 +110,20 @@ function analyzeSEO() {
     domainAge,
     httpRequests,
     pageSize,
-    numScripts
+    numScripts,
+    mobilePreview,
+    mobileLoadTime,
+    openGraph,
+    twitterCard
   };
+}
+
+function generatePDF(result) {
+  // Implement PDF generation logic here
+  alert('PDF generation is not implemented yet.');
+}
+
+function exportCSV(result) {
+  // Implement CSV export logic here
+  alert('CSV export is not implemented yet.');
 }
