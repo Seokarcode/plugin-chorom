@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+      color: #333;
+      direction: rtl; /* تنظیم جهت متن به راست‌چین */
+    }
+    h1 {
+      font-size: 24px;
+      color: #0073aa;
+      margin-bottom: 20px;
+    }
+    .result {
+      margin-bottom: 10px;
+    }
+    .result strong {
+      color: #0073aa;
+    }
+    .keyword {
+      color: green;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+    }
+    .info {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>تحلیلگر سئو</h1>
+  <div id="content">
+    <div class="result"><strong>عنوان:</strong> <span id="title"></span></div>
+    <div class="result"><strong>توضیحات متا:</strong> <span id="meta-description"></span></div>
+    <div class="result"><strong>تعداد تگ‌های H1:</strong> <span id="h1-count"></span></div>
+    <div class="result"><strong>تعداد تگ‌های H2:</strong> <span id="h2-count"></span></div>
+    <div class="result"><strong>تعداد کلمات:</strong> <span id="word-count"></span></div>
+    <div class="result"><strong>لینک‌های داخلی:</strong> <span id="internal-links"></span></div>
+    <div class="result"><strong>لینک‌های خارجی:</strong> <span id="external-links"></span></div>
+    <div class="result"><strong>لینک‌های شکسته:</strong> <span id="broken-links"></span></div>
+    <div class="result"><strong>زمان بارگذاری صفحه:</strong> <span id="load-time"></span></div>
+    <div class="result"><strong>کلمات کلیدی در عنوان:</strong> <span id="keywords-title"></span></div>
+    <div class="result"><strong>کلمات کلیدی در توضیحات متا:</strong> <span id="keywords-meta"></span></div>
+    <div class="result"><strong>کلمات کلیدی در محتوا:</strong> <span id="keywords-content"></span></div>
+    <div class="info"><strong>اطلاعات دامنه:</strong></div>
+    <div class="result"><strong>نام دامنه:</strong> <span id="domain-name"></span></div>
+    <div class="result"><strong>عمر دامنه:</strong> <span id="domain-age"></span></div>
+    <div class="result"><strong>درخواست‌های HTTP:</strong> <span id="http-requests"></span></div>
+    <div class="result"><strong>حجم کل صفحه:</strong> <span id="page-size"></span></div>
+    <div class="result"><strong>تعداد اسکریپت‌ها:</strong> <span id="num-scripts"></span></div>
+  </div>
+  <footer>
+    نویسنده: سجاد اکبری | شرکت: <a href="https://seokar.click" target="_blank">سئوکار</a> | سایت شخصی: <a href="https://sajjadakbari.ir" target="_blank">سجاد اکبری</a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
