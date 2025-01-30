@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "SEO Analyzer",
-  "version": "1.5",
+  "version": "1.6",
   "description": "An advanced SEO analyzer extension for Google Chrome.",
   "permissions": ["activeTab", "scripting"],
   "action": {
